@@ -10,8 +10,7 @@ namespace Task_4
     {
         public string Name { get; set; }
         public double Balance { get; set; }
-
-        public Account(string Name = "Un Named", double Balance = 0.0)
+        public Account(string Name = "General Account", double Balance = 0.0)
         {
             this.Name = Name;
             this.Balance = Balance;
@@ -33,17 +32,6 @@ namespace Task_4
                 return true;
             }
             return false;
-        }
-        public static Account operator +(Account a, Account b)
-        {
-            Account c = new Account();
-            c.Name = a.Name;
-            c.Balance = a.Balance + b.Balance;
-            return c;
-        }
-        public override string ToString()
-        {
-            return $"Account: {Name}";
         }
     }
 }

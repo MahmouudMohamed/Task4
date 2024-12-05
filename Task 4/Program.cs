@@ -50,6 +50,10 @@
             AccountUtil.Deposit(trustAccounts, 6000);
             AccountUtil.Withdraw(trustAccounts, 2000);
             AccountUtil.Withdraw(trustAccounts, 3000);
+            AccountUtil.Withdraw(trustAccounts, 3000);
+            AccountUtil.Withdraw(trustAccounts, 500);
+            AccountUtil.Withdraw(trustAccounts, 500);
+            // for testing limit of withdraw == Account of Wonder Woman
             AccountUtil.Withdraw(trustAccounts, 500);
 
             Console.WriteLine();
