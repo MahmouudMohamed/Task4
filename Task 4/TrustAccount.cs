@@ -48,7 +48,7 @@ namespace Task_4
             {
                 Console.WriteLine($"Can't withdraw {amount}. You Can't withdraw more than 20% of the balance. Maximum allowed: {Balance * 0.2}");
                 Console.WriteLine("=========================================================================================================");
-
+                counterWithDrawals--;
                 return false;
             }
             else 
