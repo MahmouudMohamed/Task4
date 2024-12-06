@@ -18,5 +18,6 @@ namespace Task_4
         {
             return base.Withdraw(amount + Fee);
         }
+        public override string ToString() => $"Name: {Name}, Balance: {Balance}, Fee: {Fee}";
     }
 }

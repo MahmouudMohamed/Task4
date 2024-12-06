@@ -8,29 +8,34 @@ namespace Task_4
 {
     internal class TrustAccount : SavingsAccount
     {
-        private int targetWithDrawals;
+        private const int targetWithDrawals = 3;
         private int counterWithDrawals;
+        private DateTime date;
+        private int year;
 
         public TrustAccount(string name = "My Trust Account", double balance = 0.0, double interestRate = 0.0)
             : base(name, balance, interestRate)
         {
-            targetWithDrawals = 3;
             counterWithDrawals = 0;
+            date = DateTime.Now;
+            year = date.Year+1;
         }
 
         public override bool Deposit(double amount)
         {
-            if (amount > 0)
-            {
                 if (amount >= 5000)
-                    amount += 50;
-                return base.Deposit(amount);
-            }
-            return false;
+                return base.Deposit(amount+50);
+            
+            return base.Deposit(amount);
         }
 
         public override bool Withdraw(double amount)
         {
+            if (date.Year >= year)
+            {
+                counterWithDrawals = 0;
+                year = date.Year + 1;
+            }
             if (counterWithDrawals >= targetWithDrawals)
             {
                 Console.WriteLine("=========================================================================================================");

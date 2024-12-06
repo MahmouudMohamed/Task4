@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 namespace Task_4
 {
-internal class SavingsAccount: Account
+public class SavingsAccount: Account
     {
         public double InterestRate { get; set; }
         public SavingsAccount(string name= "My Saving Account" , double balance = 0 ,  double interestRate =0 )
            : base(name , balance)
         {
-            this.InterestRate = interestRate;
+            InterestRate = interestRate;
         }
         public override bool Withdraw(double amount)
         {
             return base.Withdraw(amount+InterestRate);
         }
+        public override string ToString() => $"Name: {Name}, Balance: {Balance}, Interest Rate: {InterestRate}";
     }
 }

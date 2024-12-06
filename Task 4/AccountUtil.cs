@@ -31,12 +31,12 @@ namespace Task_4
             public static void Withdraw(List<Account> accounts, double amount)
             {
                 Console.WriteLine("\n=== Withdrawing from Accounts ==============================");
-                foreach (var acc in accounts)
+                foreach (var account in accounts)
                 {
-                    if (acc.Withdraw(amount))
-                        Console.WriteLine($"Withdrew {amount} from {acc}");
+                    if (account.Withdraw(amount))
+                        Console.WriteLine($"Withdrew {amount} from {account}");
                     else
-                        Console.WriteLine($"Failed Withdrawal of {amount} from {acc}");
+                        Console.WriteLine($"Failed Withdrawal of {amount} from {account}");
                 }
             }
         }

@@ -33,5 +33,6 @@ namespace Task_4
             }
             return false;
         }
+        public override string ToString() => $"Name: {Name}, Balance: {Balance}";
     }
 }
